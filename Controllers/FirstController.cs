@@ -39,7 +39,7 @@ namespace AppMvc.net.Controllers{
 
             return View("xinchao3",username);
         }
-
+        // [AcceptVerbs("POST")] chi dung phuong thu post moi co the truy cap vao view
         public IActionResult ViewProduct(int? id){
             var product = _productservice.Where(p => p.Id == id).FirstOrDefault();
             if(product == null) return NotFound();
